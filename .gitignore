@@ -1,0 +1,87 @@
+# ============================================
+# GITIGNORE - Proyecto Colegio Quipux
+# Backend: Java (Maven)
+# Frontend: Angular (Node.js)
+# ============================================
+
+# --- GENERAL ---
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# --- SISTEMAS / IDEs ---
+.vscode/
+.idea/
+.metadata/
+.project
+.classpath
+.settings/
+*.iml
+*.ipr
+*.iws
+
+# --- MAVEN / JAVA (backend) ---
+target/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.log
+hs_err_pid*
+
+# --- ANGULAR / NODE (frontend) ---
+node_modules/
+dist/
+tmp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# --- ANGULAR BUILD FILES ---
+.angular/
+.cache/
+coverage/
+*.tsbuildinfo
+
+# --- ENV FILES ---
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# --- SISTEMAS / COMPILACIONES ---
+*.exe
+*.dll
+*.out
+*.so
+
+# --- DOCUMENTACIÓN TEMPORAL ---
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# --- BACKUP DE EDITORES ---
+*.bak
+*.tmp
+*.old
+
+# --- LINUX / MAC / WINDOWS CACHE ---
+__pycache__/
+.cache/
+ehthumbs.db
+Icon?
+desktop.ini
+
+# --- VS CODE ---
+.history/
+*.code-workspace
