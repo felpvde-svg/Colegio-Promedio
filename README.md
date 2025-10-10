@@ -6,7 +6,7 @@ Este documento detalla la implementación completa del módulo de **Gestión de 
 
 ---
 
-## 🔧 BACKEND - Implementación Java
+##  BACKEND - Implementación Java
 
 ### 1. Modelo de Datos: `Promedio.java`
 
@@ -389,7 +389,7 @@ export interface Promedios {
 
 1. **Type Safety (Seguridad de tipos):**
    ```typescript
-   // ✅ CORRECTO - TypeScript valida los tipos
+   // CORRECTO - TypeScript valida los tipos
    const promedio: Promedios = {
      idEstudiante: 1,
      idMateria: 2,
@@ -398,7 +398,7 @@ export interface Promedios {
      nota3: 4.2
    };
    
-   // ❌ ERROR - TypeScript detecta el problema
+   //  ERROR - TypeScript detecta el problema
    const invalido: Promedios = {
      idEstudiante: "uno",  // Error: debe ser number
      nota1: 4.5
@@ -795,14 +795,14 @@ editarPromedios(p: Promedios) {
    
    **¿Por qué spread operator `{...p}`?**
    
-   **❌ INCORRECTO:**
+   **INCORRECTO:**
    ```typescript
    this.nuevoPromedio = p;  // Referencia al mismo objeto
    ```
    - Modificar el formulario alteraría directamente la tabla
    - Cambios visibles antes de guardar
    
-   **✅ CORRECTO:**
+   **CORRECTO:**
    ```typescript
    this.nuevoPromedio = { ...p };  // Copia superficial
    ```
