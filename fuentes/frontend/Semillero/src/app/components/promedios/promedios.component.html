@@ -1,0 +1,60 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Gestión de Promedios</h2>
+  
+    <form (ngSubmit)="guardarPromedios()" class="mb-4">
+      <div class="row g-2">
+        <div class="col">
+          <input type="number" [(ngModel)]="nuevoPromedio.idEstudiante" name="idEstudiante" placeholder="ID Estudiante" class="form-control" required>
+        </div>
+        <div class="col">
+          <input type="number" [(ngModel)]="nuevoPromedio.idMateria" name="idMateria" placeholder="ID Materia" class="form-control" required>
+        </div>
+        <div class="col">
+          <input type="number" [(ngModel)]="nuevoPromedio.nota1" name="nota1" placeholder="Nota 1" class="form-control" required>
+        </div>
+        <div class="col">
+          <input type="number" [(ngModel)]="nuevoPromedio.nota2" name="nota2" placeholder="Nota 2" class="form-control" required>
+        </div>
+        <div class="col">
+          <input type="number" [(ngModel)]="nuevoPromedio.nota3" name="nota3" placeholder="Nota 3" class="form-control" required>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" type="submit">
+            {{ editando ? 'Actualizar' : 'Agregar' }}
+          </button>
+          <button *ngIf="editando" class="btn btn-secondary ms-2" type="button" (click)="cancelarEdicion()">Cancelar</button>
+        </div>
+      </div>
+    </form>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>IDEstudiante</th>
+          <th>IDMateria</th>
+          <th>Nota 1</th>
+          <th>Nota 2</th>
+          <th>Nota 3</th>
+          <th>Promedio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of promedios">
+          <td>{{ p.idPromedio }}</td>
+          <td>{{ p.idEstudiante }}</td>
+          <td>{{ p.idMateria }}</td>
+          <td>{{ p.nota1 }}</td>
+          <td>{{ p.nota2 }}</td>
+          <td>{{ p.nota3 }}</td>
+          <td>{{ (p.nota1 + p.nota2 + p.nota3) / 3 | number:'1.2-2' }}</td>
+          <td>
+            <button class="btn btn-sm btn-warning me-2" (click)="editarPromedios(p)">Editar</button>
+            <button class="btn btn-sm btn-danger" (click)="eliminarPromedios(p.idPromedio)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
