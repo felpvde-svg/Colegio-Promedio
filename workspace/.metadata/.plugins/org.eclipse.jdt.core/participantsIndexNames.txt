@@ -1,5 +1,0 @@
-INDEX VERSION 1.134
-/home/semillero/proyecto-colegio-quipux/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2538158136.index
-/Colegio/src/main/java
-/home/semillero/proyecto-colegio-quipux/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2642039853.index
-/Colegio/src/main/java
